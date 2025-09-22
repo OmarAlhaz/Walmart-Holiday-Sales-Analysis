@@ -28,13 +28,41 @@ It covers **data extraction, transformation, aggregation**, and produces insight
 ## 📂 Project Structure
 ```plaintext
 Walmart-Holiday-Sales-Analysis/
-│── data/            # Raw datasets (CSV, Parquet)
-│── scripts/         # ETL pipeline scripts
-│── outputs/         # Cleaned and aggregated results
-│── docs/            # Documentation & analysis
-│── tests/           # Unit tests
-│── requirements.txt # Dependencies
-│── README.md        # Project overview
+│
+├── data/                               # Raw datasets
+│   ├── grocery_sales.csv
+│   └── extra_data.parquet
+│
+├── docs/                               # Project documentation
+│   ├── architecture.md                 # ETL pipeline diagram (Mermaid)
+│   ├── data_catalog.md                 # Dataset dictionary
+│   ├── findings.md                     # Key insights and analysis
+│   └── setup.md                        # How to run the project
+│
+├── figure_scripts/                      # Scripts to generate visualizations
+│   ├── plot_holiday_vs_nonholiday.py
+│   └── plot_monthly_sales_trend.py
+│
+├── outputs/                             # Generated outputs
+│   ├── clean_data.csv                   # Cleaned dataset
+│   ├── agg_data.csv                     # Aggregated monthly sales
+│   └── figures/                         # Figures generated from analysis
+│       ├── holiday_vs_nonholiday.png
+│       └── monthly_sales_trend.png
+│
+├── scripts/                             # ETL pipeline scripts
+│   ├── extract.py                       # Extract data
+│   ├── transform.py                     # Clean & transform data
+│   ├── aggregate.py                     # Compute aggregations
+│   ├── load.py                          # Save outputs
+│   └── pipeline.py                      # Master ETL pipeline
+│
+├── tests/                               # Unit tests
+│   └── test_pipeline.py
+│
+├── LICENSE                              # MIT License
+├── README.md                             # Project overview and instructions
+└── requirements.txt                      # Python dependencies
 ```
 ---
 
