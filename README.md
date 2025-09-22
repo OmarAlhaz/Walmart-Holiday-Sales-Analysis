@@ -112,6 +112,10 @@ Walmart-Holiday-Sales-Analysis/
 | 11    | 45,892.55  |
 | 12    | 48,421.10  |
 
+### 📈 Monthly Average Weekly Sales
+
+![Monthly Sales Trend](outputs/figures/monthly_sales_trend.png)
+
 ---
 
 ## 📑 Documentation
