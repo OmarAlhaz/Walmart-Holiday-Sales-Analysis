@@ -7,26 +7,28 @@ clean_data_path = os.path.join("outputs", "clean_data.csv")
 figures_path = os.path.join("outputs", "figures")
 os.makedirs(figures_path, exist_ok=True)
 
-# Load clean data
+# Load data
 clean_data = pd.read_csv(clean_data_path)
 
-# Aggregate sales by Month and IsHoliday
+# Aggregate weekly sales
 agg = clean_data.groupby(['Month', 'IsHoliday'])['Weekly_Sales'].mean().reset_index()
-pivot_df = agg.pivot(index='Month', columns='IsHoliday', values='Weekly_Sales')
-pivot_df.columns = ['Non-Holiday', 'Holiday']
+agg['IsHoliday'] = agg['IsHoliday'].map({0: 'Non-Holiday', 1: 'Holiday'})
 
-# Plot
-plt.figure(figsize=(10,6))
-plt.plot(pivot_df.index, pivot_df['Non-Holiday'], marker='o', label='Non-Holiday', color='blue')
-plt.plot(pivot_df.index, pivot_df['Holiday'], marker='o', label='Holiday', color='red')
-plt.title('Average Weekly Sales: Holiday vs Non-Holiday')
+# Pivot for bar chart
+pivot_df = agg.pivot(index='Month', columns='IsHoliday', values='Weekly_Sales')
+
+# Plot grouped bar chart
+pivot_df.plot(kind='bar', stacked=True, figsize=(12,6), color=['skyblue','salmon'])
+plt.title('Stacked Weekly Sales: Holiday vs Non-Holiday by Month')
 plt.xlabel('Month')
-plt.ylabel('Average Weekly Sales')
-plt.xticks(range(1,13))
-plt.grid(True)
-plt.legend()
+plt.ylabel('Weekly Sales')
+plt.xticks(rotation=0)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.legend(title='')
 plt.tight_layout()
+plt.savefig(os.path.join(figures_path, "holiday_vs_nonholiday_stacked.png"))
+plt.show()
 
 # Save figure
-plt.savefig(os.path.join(figures_path, 'holiday_vs_nonholiday.png'))
+plt.savefig(os.path.join(figures_path, "holiday_vs_nonholiday_bar.png"))
 plt.show()
