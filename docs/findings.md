@@ -47,18 +47,6 @@ The analysis focused on **monthly sales trends** and the **impact of public holi
 
 ---
 
-## 🖼️ Visualization (Optional)
-
-If you include plots in `outputs/figures/`, you can link them here:
-
-- **Monthly Sales Trend**  
-  ![Monthly Sales Trend](../outputs/figures/monthly_sales.png)
-
-- **Holiday vs. Non-Holiday Sales**  
-  ![Holiday Impact](../outputs/figures/holiday_vs_nonholiday.png)
-
----
-
 ## 📌 Conclusion
 - Holidays are **critical sales drivers** for Walmart.  
 - Markdown promotions **amplify holiday demand**.  
