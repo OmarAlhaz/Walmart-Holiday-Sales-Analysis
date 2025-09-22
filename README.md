@@ -33,7 +33,6 @@ Walmart-Holiday-Sales-Analysis/
 │── outputs/         # Cleaned and aggregated results
 │── docs/            # Documentation & analysis
 │── tests/           # Unit tests
-│── notebooks/       # Optional EDA
 │── requirements.txt # Dependencies
 │── README.md        # Project overview
 ```
