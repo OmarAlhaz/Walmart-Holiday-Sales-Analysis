@@ -26,6 +26,7 @@ It covers **data extraction, transformation, aggregation**, and produces insight
 ---
 
 ## 📂 Project Structure
+```plaintext
 Walmart-Holiday-Sales-Analysis/
 │── data/            # Raw datasets (CSV, Parquet)
 │── scripts/         # ETL pipeline scripts
@@ -35,7 +36,7 @@ Walmart-Holiday-Sales-Analysis/
 │── notebooks/       # Optional EDA
 │── requirements.txt # Dependencies
 │── README.md        # Project overview
-
+```
 ---
 
 ## 🔧 Pipeline Steps
