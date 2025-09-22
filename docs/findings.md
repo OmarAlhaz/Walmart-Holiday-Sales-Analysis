@@ -50,7 +50,7 @@ The analysis focused on **monthly sales trends** and the **impact of public holi
 ## 🖼️ Visualization
 
 - **Monthly Sales Trend**  
-  ![Monthly Sales Trend](../outputs/figures/monthly_sales.png)
+  ![Monthly Sales Trend](../outputs/figures/monthly_sales_trend.png)
 
 - **Holiday vs. Non-Holiday Sales**  
   ![Holiday Impact](../outputs/figures/holiday_vs_nonholiday.png)
