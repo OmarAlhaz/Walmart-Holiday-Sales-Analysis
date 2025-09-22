@@ -111,5 +111,3 @@ pytest tests/
 ---
 
 ✅ You’re now ready to explore **holiday sales trends** at Walmart!
-
-```
