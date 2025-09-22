@@ -113,5 +113,3 @@ pytest tests/
 ✅ You’re now ready to explore **holiday sales trends** at Walmart!
 
 ```
-Do you want me to also help you write a **short but impactful GitHub project description** (like a tagline + topics + badges) so your repo looks polished in the GitHub UI?
-```
